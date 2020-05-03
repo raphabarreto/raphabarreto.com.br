@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Raphael Barreto`,
+    position: `FullStack Developer`,
     description: `Esse é um simples blog criado para aprender e reunir informações do mundo da programação`,
     author: `Raphael Barreto`,
   },
