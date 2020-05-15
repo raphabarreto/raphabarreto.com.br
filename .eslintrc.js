@@ -17,6 +17,14 @@ module.exports = {
     sourceType: "module"
   },
   plugins: ["react", "jsx-a11y", "import", "react-hooks", "prettier"],
+  settings: {
+    "import/resolver": {
+      "alias": [
+        ["~components", "./src/components"],
+        ["~styles", "./src/styles"]
+      ]
+    }
+  },
   rules: {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
