@@ -1,7 +1,7 @@
 import React from 'react';
-import Profile from '../Profile';
-import SocialLinks from '../SocialLinks';
-import MenuLinks from '../MenuLinks';
+import Profile from '~components/Profile';
+import SocialLinks from '~components/SocialLinks';
+import MenuLinks from '~components/MenuLinks';
 
 import * as S from './styled';
 

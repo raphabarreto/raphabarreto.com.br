@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import * as S from './styled';
 
-import Avatar from '../Avatar';
+import Avatar from '~components/Avatar';
 
 const Profile = () => {
   const {
