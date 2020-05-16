@@ -1,5 +1,7 @@
 const path = require('path');
 
+const { createFilePath } = require(`gatsby-source-filesystem`);
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -10,8 +12,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     },
   });
 };
-
-const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // To add the slug field to each post
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -32,4 +32,32 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: `/${slug.slice(12)}`,
     });
   }
+};
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  return graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slugs,
+        component: path.resolve('./src/templates/blog-post.js'),
+        context: {
+          slug: node.fields.slug,
+        },
+      });
+    });
+  });
 };
