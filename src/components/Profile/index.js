@@ -24,7 +24,7 @@ const Profile = () => {
 
   return (
     <S.ProfileWrapper>
-      <S.ProfileLink>
+      <S.ProfileLink href="https://bit.ly/meu-contato-linkedin" target="_blank">
         <Avatar />
         <S.ProfileAuthor>
           {title}
