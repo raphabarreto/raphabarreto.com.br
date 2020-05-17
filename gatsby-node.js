@@ -2,7 +2,8 @@ const path = require('path');
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
+  // Component aliases
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -11,6 +12,15 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       },
     },
   });
+
+  // React Hot Reload configuration
+  const config = getConfig();
+  if (stage.startsWith('develop') && config.resolve) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'react-dom': '@hot-loader/react-dom',
+    };
+  }
 };
 
 // To add the slug field to each post
