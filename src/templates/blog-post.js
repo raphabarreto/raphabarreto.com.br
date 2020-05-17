@@ -34,7 +34,7 @@ BlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
-      html: PropTypes.object,
+      html: PropTypes.string,
     }),
   }),
 };
