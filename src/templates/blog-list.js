@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Layout from '~components/Layout';
 import SEO from '~components/seo';
@@ -78,5 +78,38 @@ export const query = graphql`
     }
   }
 `;
+
+BlogList.defaultProps = {
+  pageContext: Object,
+  data: Object,
+};
+
+BlogList.propTypes = {
+  pageContext: PropTypes.shape({
+    currentPage: PropTypes.number.isRequired,
+    numPages: PropTypes.number.isRequired,
+  }),
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontmatter: PropTypes.shape({
+              background: PropTypes.string,
+              category: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              timeToRead: PropTypes.number,
+              title: PropTypes.string.isRequired,
+              description: PropTypes.string.isRequired,
+            }),
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }),
+          }),
+        }).isRequired
+      ),
+    }),
+  }),
+};
 
 export default BlogList;
