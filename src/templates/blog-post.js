@@ -2,14 +2,18 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
+import Layout from '~components/Layout';
+import SEO from '~components/seo';
+
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
 
   return (
-    <>
+    <Layout>
+      <SEO title={post.frontmatter.title} />
       <h1>Title: {post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </>
+    </Layout>
   );
 };
 
