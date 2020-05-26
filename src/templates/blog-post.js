@@ -4,11 +4,14 @@ import PropTypes from 'prop-types';
 
 import Layout from '~components/Layout';
 import SEO from '~components/seo';
+import RecommendedPosts from '~components/RecommendedPosts';
 
 import * as S from '~components/Post/styled';
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark;
+  const next = pageContext.nextPost;
+  const previous = pageContext.previousPost;
 
   return (
     <Layout>
@@ -23,6 +26,7 @@ const BlogPost = ({ data }) => {
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </S.MainContent>
+      <RecommendedPosts next={next} previous={previous} />
     </Layout>
   );
 };
@@ -45,6 +49,7 @@ export default BlogPost;
 
 BlogPost.defaultProps = {
   data: Object,
+  pageContext: Object,
 };
 
 BlogPost.propTypes = {
@@ -54,5 +59,9 @@ BlogPost.propTypes = {
       html: PropTypes.string,
       timeToRead: PropTypes.number,
     }),
+  }),
+  pageContext: PropTypes.shape({
+    nextPost: PropTypes.object,
+    previousPost: PropTypes.object,
   }),
 };
