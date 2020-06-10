@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Raphael Barreto`,
     position: `FullStack Developer`,
-    description: `Esse é um simples blog criado para aprender e reunir informações do mundo da programação`,
+    description: `"O aprendizado é contínuo, e sempre haverá um próximo nível."`,
     author: `Raphael Barreto`,
   },
   plugins: [
