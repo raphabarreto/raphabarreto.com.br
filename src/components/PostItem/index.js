@@ -27,7 +27,7 @@ const PostItem = ({
 );
 
 PostItem.defaultProps = {
-  background: '#1fa1f2',
+  background: 'var(--highlight)',
   timeToRead: null,
 };
 
