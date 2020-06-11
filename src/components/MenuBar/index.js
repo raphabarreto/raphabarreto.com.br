@@ -6,7 +6,7 @@ import {
   UpArrowAlt as Arrow,
   Bulb as Light,
 } from 'styled-icons/boxicons-regular';
-import { ThList as List } from 'styled-icons/fa-solid';
+import { ViewList as List } from 'styled-icons/material';
 
 import * as S from './styled';
 
