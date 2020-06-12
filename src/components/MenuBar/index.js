@@ -8,6 +8,8 @@ import {
 } from 'styled-icons/boxicons-regular';
 import { ViewList as List } from 'styled-icons/material';
 
+import getThemeColor from '../../utils/getThemeColor';
+
 import * as S from './styled';
 
 const MenuBar = () => {
@@ -31,7 +33,7 @@ const MenuBar = () => {
         <S.MenuBarLink
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
           to="/"
           title="Voltar para Home"
@@ -43,7 +45,7 @@ const MenuBar = () => {
         <S.MenuBarLink
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
           to="/search/"
           title="Pesquisar"

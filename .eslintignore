@@ -2,3 +2,4 @@
 /src/html.js
 node_modules
 build
+/src/utils/getThemeColor.js
