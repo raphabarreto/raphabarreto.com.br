@@ -8,6 +8,7 @@ module.exports = {
     position: `FullStack Developer`,
     description: `"O aprendizado é contínuo, e sempre haverá um próximo nível."`,
     author: `Raphael Barreto`,
+    siteUrl: `https://raphabarreto.com.br`
   },
   plugins: [
     `gatsby-plugin-transition-link`,
