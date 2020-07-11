@@ -77,8 +77,8 @@ module.exports = {
         name: `Raphael Barreto`,
         short_name: `Raphael Barreto`,
         start_url: `/`,
-        background_color: `#16202c`,
-        theme_color: `#16202c`,
+        background_color: `#312e38`,
+        theme_color: `#312e38`,
         display: `minimal-ui`,
         icon: `src/images/logo-icon.png`, // This path is relative to the root of the site.
       },
