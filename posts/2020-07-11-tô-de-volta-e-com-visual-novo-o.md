@@ -1,7 +1,8 @@
 ---
 title: Tô de volta e com visual novo \o/
 description: Estou de volta e com o blog totalmente repaginado
-date: 2020-07-11 07:28:16
+date: 2020-07-11T07:28:16.000Z
+thumbnail: assets/img/lugia.jpg
 image: assets/img/lugia.jpg
 category: misc
 background: "#7AAB13"
