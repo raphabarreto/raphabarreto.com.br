@@ -16,11 +16,11 @@ Estou aqui trazendo mais um post pra vocês e dessa vez, eu criei a interface do
 
 ## ✨ Demonstração
 
-<p >Acesse <a href="https://discord-clone.raphabarreto.com.br/">aqui</a> para ver a demonstração do resultado final.</p>
+- <p>Acesse <a href="https://discord-clone.raphabarreto.com.br/">aqui</a> para ver a demonstração do resultado final.</p>
 
+## 😀 Link do repositório
 
-
-![Discord](assets/img/discord-clone.png "Discord")
+- <https://github.com/raphabarreto/discord-clone>
 
 
 
