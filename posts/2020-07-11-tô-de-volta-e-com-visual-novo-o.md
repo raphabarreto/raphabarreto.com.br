@@ -7,7 +7,7 @@ image: assets/img/lugia.jpg
 category: misc
 background: "#7AAB13"
 ---
-Olá à pessoal 👋 !
+Olá pessoal 👋 !
 
 Depois de um bom tempo sem postar nada por aqui, decidi refazer do 0 este blog. É isso mesmo! Joguei tudo no chão e comecei construindo desde o início graças ao [Gatsby](https://www.gatsbyjs.org/tutorial/).
 
