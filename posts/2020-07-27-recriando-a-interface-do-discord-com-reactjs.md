@@ -6,7 +6,7 @@ image: assets/img/discord-logo.jpg
 category: react
 background: "#61DBFB"
 ---
-Olá à pessoal 👋 !
+Olá pessoal 👋 !
 
 Estou aqui trazendo mais um post pra vocês e dessa vez, eu criei a interface do Discord com as seguintes tecnologias:
 
@@ -15,7 +15,6 @@ Estou aqui trazendo mais um post pra vocês e dessa vez, eu criei a interface do
 * [Styled Components](https://styled-components.com/)
 
 ## ✨ Demonstração
-* <p>Acesse <a href="https://discord-clone.raphabarreto.com.br/">aqui</a> para ver a demonstração do resultado final.</p>
 
 ## 😀 Link do repositório
 
